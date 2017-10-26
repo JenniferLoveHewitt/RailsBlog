@@ -1,0 +1,25 @@
+.container
+  .row
+    .col
+      .flash_no_found{:align => "center"}
+        %p= flash[:err]
+
+.new_form{:align => "center"}
+  %h2= "Creating a new article"
+
+  =form_for @article do |a|
+    =a.label          :category
+    %p= a.text_field  :category
+
+    =a.label          :title
+    %p= a.text_field  :title
+
+    =a.label          :subtitle
+    %p= a.text_field  :subtitle
+
+    =a.label          :content
+    %p= a.text_area   :content
+
+    = a.file_field :main_pic
+
+    =a.submit "Publish"

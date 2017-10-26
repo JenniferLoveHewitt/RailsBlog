@@ -1,0 +1,159 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ * require_tree .
+ * require_self
+ */
+
+@import "bootstrap";
+
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 100px;
+}
+
+footer .company_label{
+  padding-top: 100px;
+  font-size: 22px;
+}
+
+footer .social{
+  padding-top: 40px;
+  font-size: 20px;
+}
+
+footer .email{
+  padding-top: 40px;
+  font-size: 16px;
+}
+
+.nav-item {
+  margin-left: 40px;
+  font-size: 17px;
+}
+
+.last-item {
+  margin-right: 70px;
+}
+
+.navbar-brand{
+  font-size: 20px;
+}
+
+.article{
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.additional_info{
+  color: #999999;
+}
+
+p, h1, h2, h3, h4, span{
+  font-family: "Varela Round";
+}
+
+.article-body span{
+  color: #BBBBBB;
+}
+
+.article-body p{
+  font-size: 20px;
+  padding-bottom: 70px;
+}
+
+.article-body h2{
+  padding-top: 70px;
+}
+
+.additional_article{
+  padding-bottom: 40px;
+  margin-top: 40px;
+}
+
+.disq{
+  margin-right: 50px;
+  margin-bottom: 70px;
+}
+
+.sort{
+  float: right;
+}
+
+nav {
+  margin-bottom: 30px;
+}
+
+.dropdown span{
+  margin-right: 20px;
+}
+
+.new_form textarea {
+  width: 800px;
+  height: 350px;
+}
+
+.new_form input, h2{
+  margin-bottom: 40px;
+}
+
+.edit_form textarea {
+  width: 800px;
+  height: 350px;
+}
+
+.edit_form input, h2{
+  margin-bottom: 40px;
+}
+
+.admin_form{
+  margin-bottom: 275px;
+  margin-top: 275px;
+}
+
+.flash_no_found {
+  font-size: 25px;
+  color: #B00100;
+}
+
+.pagination {
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination a {
+  border: 1px solid #000;
+  color: #000;
+}
+.pagination a:hover, .pagination a:active {
+  border: 1px solid #000;
+  color: #000;
+}
+.pagination span.current {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #FFF;
+}
+.pagination span.disabled {
+  border: 1px solid #000;
+  color: #fff;
+}
+
+.page-item.active .page-link {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+

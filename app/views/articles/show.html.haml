@@ -1,0 +1,31 @@
+.container-fluid
+  .row
+    .col.col-xl-2.col-lg-2.col-md-12.col-sm-12.col-12
+
+    .col-xl-6.col-lg-6.col-md-12.col-sm-12.col-12.article-body
+      %h1=    @article.title
+      %span=  @article.created_at.to_s(:ru_datetime2)
+      %br
+      %img{:src => @article.main_pic.url, :class => "img-fluid", :width => "700px"}
+      %h2=    @article.subtitle
+      %p=     @article.content
+
+    .col.col-xl-1.col-lg-1.col-md-12.col-sm-12.col-12
+
+    .col.col-xl-2.col-lg-2.col-md-12.col-sm-12.col-12
+      .additional_articles
+        -@additional_articles.each do |a|
+          %a{:href => article_path(a)}
+            .additional_article{:align => "center"}
+              %h3= a.title
+              %img{:src => a.main_pic.url, :class => "img-fluid", :width => "500px"}
+          %hr
+
+    .col.col-xl-1.col-lg-1.col-md-12.col-sm-12.col-12
+
+.disq
+  .container
+    .row
+      .col.col-xl-10.col-lg-10.col-md-12.col-sm-12.col-12
+        =render "shared/comments"
+      .col.col-xl-2.col-lg-2.col-md-12.col-sm-12.col-12

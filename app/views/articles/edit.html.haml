@@ -1,0 +1,17 @@
+.edit_form{:align => "center"}
+  %h2= "Amending article"
+
+  =form_for @article do |a|
+    =a.label          :category
+    %p= a.text_field  :category
+
+    =a.label          :title
+    %p= a.text_field  :title
+
+    =a.label          :subtitle
+    %p= a.text_field  :subtitle
+
+    =a.label          :content
+    %p= a.text_area   :content
+
+    =a.submit "Save"

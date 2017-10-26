@@ -1,0 +1,44 @@
+.container
+  .row
+    .col
+      .flash_no_found{:align => "center"}
+        %p= flash[:alert]
+
+.container
+  .row
+    .col-xl-10
+    .col-xl-2
+      .sort
+        .dropdown
+          %span= "Sort by: "
+
+          %button{:class => "btn btn-secondary dropdown-toggle", :type => "button",
+          :id => "dropdownMenuButton", :data => {:toggle => "dropdown"}}= "First new"
+
+          .dropdown-menu{:aria => {:labelledby => "dropdownMenuButton"}}
+            %a{:href => "/articles?sort=created", :class => "dropdown-item"}=       "First new"
+            %a{:href => "/articles?sort=created_desk", :class => "dropdown-item"}=  "First old"
+            %a{:href => "/articles?sort=rating", :class => "dropdown-item"}=        "Rating"
+
+  -@articles.each do |a|
+    .article
+      .row
+        .col
+          .additional_info
+            %p=   "#{a.created_at.to_s(:ru_datetime)}"
+          %h1=  a.title
+          .row
+            .col.col-xl-7.col-lg-7.col-md-7.col-sm-12.col-12
+              %img{:src => a.main_pic.url, :alt => a.title, :class => "img-fluid"}
+            .col.col-xl-5.col-lg-5.col-md-5.col-sm-12.col-12
+              %h4=  a.subtitle
+              %p=   "#{a.content.first(550)}..."
+              .row
+                .col.col-xl-8.col-lg-8.col-md-6.col-sm-9.col-6
+                .col.col-xl-4.col-lg-4.col-md-6.col-sm-3.col-6
+                  %a{:href => article_path(a)}
+                    %button{:type => "button", :class => "btn btn-light"}= "Go to article"
+
+    %hr{:color => "black", :width => "60%", :style => "height:1px"}
+
+  =will_paginate @articles, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer, :inner_window => 2, :outer_window => 2
