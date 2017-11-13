@@ -20,21 +20,48 @@ footer {
   background-color: black;
   color: white;
   margin-top: 100px;
+
+  .company_label {
+    padding-top: 100px;
+    font-size: 22px;
+  }
+
+  .social {
+    padding-top: 40px;
+    font-size: 20px;
+  }
+
+  .email {
+    padding-top: 40px;
+    font-size: 16px;
+  }
 }
 
-footer .company_label{
-  padding-top: 100px;
-  font-size: 22px;
+.article {
+  margin: {
+    top: 20px;
+    bottom: 70px;
+  };
 }
 
-footer .social{
-  padding-top: 40px;
-  font-size: 20px;
+.article-body {
+  span {
+    color: #BBBBBB;
+  }
+
+  p {
+    font-size: 20px;
+    padding-bottom: 70px;
+  }
+
+  h2 {
+    padding-top: 70px;
+  }
 }
 
-footer .email{
-  padding-top: 40px;
-  font-size: 16px;
+.additional_article {
+  padding-bottom: 40px;
+  margin-top: 40px;
 }
 
 .nav-item {
@@ -42,51 +69,28 @@ footer .email{
   font-size: 17px;
 }
 
-.last-item {
-  margin-right: 70px;
-}
-
 .navbar-brand{
   font-size: 20px;
 }
 
-.article{
-  margin-top: 20px;
-  margin-bottom: 70px;
+.last-item {
+  margin-right: 70px;
 }
 
-.additional_info{
+.additional_info {
   color: #999999;
 }
 
-p, h1, h2, h3, h4, span{
+p, h1, h2, h3, h4, span {
   font-family: "Varela Round";
 }
 
-.article-body span{
-  color: #BBBBBB;
-}
-
-.article-body p{
-  font-size: 20px;
-  padding-bottom: 70px;
-}
-
-.article-body h2{
-  padding-top: 70px;
-}
-
-.additional_article{
-  padding-bottom: 40px;
-  margin-top: 40px;
-}
-
-.disq{
+.disq {
   margin-right: 50px;
   margin-bottom: 70px;
 }
 
-.sort{
+.sort {
   float: right;
 }
 
@@ -94,31 +98,37 @@ nav {
   margin-bottom: 30px;
 }
 
-.dropdown span{
+.dropdown span {
   margin-right: 20px;
 }
 
-.new_form textarea {
-  width: 800px;
-  height: 350px;
+.new_form {
+  textarea {
+    width: 800px;
+    height: 350px;
+  }
+
+  input, h2 {
+    margin-bottom: 40px;
+  }
 }
 
-.new_form input, h2{
-  margin-bottom: 40px;
+.edit_form {
+  textarea {
+    width: 800px;
+    height: 350px;
+  }
+
+  input, h2 {
+    margin-bottom: 40px;
+  }
 }
 
-.edit_form textarea {
-  width: 800px;
-  height: 350px;
-}
-
-.edit_form input, h2{
-  margin-bottom: 40px;
-}
-
-.admin_form{
-  margin-bottom: 275px;
-  margin-top: 275px;
+.admin_form {
+  margin: {
+    bottom: 275px;
+    top: 275px;
+  };
 }
 
 .flash_no_found {
@@ -130,24 +140,29 @@ nav {
   margin-top: 10px;
   align-items: center;
   justify-content: center;
-}
 
-.pagination a {
-  border: 1px solid #000;
-  color: #000;
-}
-.pagination a:hover, .pagination a:active {
-  border: 1px solid #000;
-  color: #000;
-}
-.pagination span.current {
-  border: 1px solid #000;
-  background-color: #000;
-  color: #FFF;
-}
-.pagination span.disabled {
-  border: 1px solid #000;
-  color: #fff;
+  $color: #000;
+
+  a {
+    border: 1px solid $color;
+    color: $color;
+  }
+
+  a:hover, .pagination a:active {
+    border: 1px solid $color;
+    color: $color;
+  }
+
+  span.current {
+    border: 1px solid $color;
+    background-color: $color;
+    color: #fff;
+  }
+
+  span.disabled {
+    border: 1px solid $color;
+    color: #fff;
+  }
 }
 
 .page-item.active .page-link {
@@ -155,5 +170,3 @@ nav {
   background-color: #000;
   border-color: #000;
 }
-
-
