@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    if params[:log].to_s == "admin" && params[:pass].to_s == "dfd"
+    if params[:log].to_s == "admin"
       @article = Article.new
     else
       redirect_to "/articles"
